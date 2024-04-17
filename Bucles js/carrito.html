@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="author"  content="Josebeth Llumiquinga">
+	<title>BUCLES</title>
+  </head>
+  <body>
+<script>
+	let precioTotal = 0;
+
+// Solicitar al usuario el precio de 5 productos
+for (let i = 1; i <= 5; i++) {
+    // Solicitar al usuario el precio del producto actual
+    let precioProducto = parseFloat(prompt(`Introduce el precio del producto ${i}: `));
+    
+    // Validar si el precio es un número válido
+    if (isNaN(precioProducto) || precioProducto <= 0) {
+        document.write("Precio no válido. Introduce un número positivo.");
+        // Decrementar el índice para repetir la misma iteración
+        i--;
+        continue;
+    }
+
+    // Acumular el precio del producto al precio total
+    precioTotal += precioProducto;
+}
+
+// Verificar si el precio total es igual o mayor a 100 euros
+if (precioTotal >= 100) {
+    // Calcular el descuento del 15%
+    let descuento = precioTotal * 0.15;
+    // Calcular el precio final con descuento
+    let precioFinal = precioTotal - descuento;
+    // Mostrar el precio original y el precio final con descuento
+    document.write(`Precio original: ${precioTotal.toFixed(2)} euros`);
+   document.write(`Precio con descuento (15%): ${precioFinal.toFixed(2)} euros`);
+} else {
+    // Si el precio total es menor a 100 euros, mostrar solo el precio total
+    document.write(`Precio total: ${precioTotal.toFixed(2)} euros`);
+}
+</script>
+</body>
+</html>

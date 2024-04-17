@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content= "Josebeth Llumiquinga">
+	<title>CONDICIONALES</title>
+</head>
+<body>
+<div id="salida">
+
+<script >
+	//condicionales
+
+let pares = prompt("Indica hasta que número quieres ver :");
+
+let par = [];
+
+if (pares == null || pares== '') {
+
+  alert('Debes introducir un valor');
+}
+
+for (let i = 0; i < pares; i++) {
+  if (i % 2 === 0) {
+    par.push(i);
+  }
+}
+document.getElementById('salida').innerHTML = par;
+
+</script>
+</body>
+</html>
