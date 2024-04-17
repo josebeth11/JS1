@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BUCLES</title>
+
+</head>
+<body>
+	
+		
+<script>
+	
+function pedirSaludoNombre() {
+    let saludo = prompt("Introduce un saludo (por ejemplo, 'Hola' o 'Adiós'): ");
+    let nombre = prompt("Introduce un nombre: ");
+    return { saludo, nombre };
+}
+
+function main() {
+    let numRepeticiones;
+    do {
+        numRepeticiones = parseInt(prompt("Introduce el número de repeticiones: "));
+    } while (isNaN(numRepeticiones));
+
+    let resultados = [];
+    for (let i = 0; i < numRepeticiones; i++) {
+        let { saludo, nombre } = pedirSaludoNombre();
+        resultados.push({ saludo, nombre });
+    }
+
+    resultados.forEach(({ saludo, nombre }) => {
+        console.log(`${saludo} ${nombre}`);
+    });
+}
+
+main();
+</script>
+</body>
+</html>

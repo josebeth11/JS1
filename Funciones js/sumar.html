@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author"  content="Josebeth Llumiquinga">
+</head>
+<body>
+<script>
+	// Función para sumar dos números
+function sumar(num1, num2) {
+    // Calcular la suma
+    let resultado = num1 + num2;
+    // Mostrar el resultado de la suma en el documento
+    document.write(`El resultado de la suma es: ${resultado}`);
+}
+
+// Función para restar dos números
+function restar(num1, num2) {
+    // Calcular la resta
+    let resultado = num1 - num2;
+    // Mostrar el resultado de la resta en el documento
+    document.write(`El resultado de la resta es: ${resultado}`);
+}
+
+// Función principal del programa
+function main() {
+    // Solicitar al usuario el primer número
+    let numero1 = parseFloat(prompt("Introduce el primer número: "));
+    // Solicitar al usuario el segundo número
+    let numero2 = parseFloat(prompt("Introduce el segundo número: "));
+    // Solicitar al usuario la operación a realizar (sumar o restar)
+    let operacion = prompt("¿Deseas sumar (+) o restar (-)?");
+
+    // Verificar la operación seleccionada por el usuario
+    if (operacion === "+") {
+        // Si es suma, llamar a la función sumar() y mostrar el resultado
+        sumar(numero1, numero2);
+    } else if (operacion === "-") {
+        // Si es resta, llamar a la función restar() y mostrar el resultado
+        restar(numero1, numero2);
+    } else {
+        // Si la operación no es válida, mostrar un mensaje de error
+        document.write("Operación no válida.");
+    }
+}
+
+// Llamar a la función principal para iniciar el programa
+main();
+</script>
+</body>
+</html>
