@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author"  content="Josebeth Llumiquinga">
+	<title></title>
+</head>
+<body>
+<script >
+	//condicionales
+	let continuar = prompt("¿Está enchufado? (si/no)");
+
+// Verificar si el usuario quiere continuar
+if (continuar === "si") {
+    // Si el usuario quiere continuar, preguntar si quiere realizar una acción adicional
+    let accionAdicional = prompt("¿Está el foco quemado? (si/no)");
+
+    // Verificar si el usuario quiere realizar una acción adicional
+    if (accionAdicional === "si") {
+        // Si el usuario quiere realizar una acción adicional, mostrar un mensaje
+        alert("reemplazar foco");
+    } else if (accionAdicional === "no") {
+        // Si el usuario no quiere realizar una acción adicional, mostrar un mensaje de despedida
+         alert("comprar nueva lampara");
+    } else {
+        // Si la respuesta no es válida, mostrar un mensaje de error
+        alert("Respuesta no válida.");
+    }
+} else if (continuar === "no") {
+    // Si el usuario no quiere continuar, mostrar un mensaje de despedida
+    alert("enchufala");
+} else {
+    // Si la respuesta no es válida, mostrar un mensaje de error
+     alert("Respuesta no válida.");
+}
+</script>
+</body>
+</html>
